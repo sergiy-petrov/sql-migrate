@@ -38,10 +38,10 @@ func realMain() int {
 				return &SkipCommand{}, nil
 			},
 		},
-		HelpFunc: cli.BasicHelpFunc("sql-migrate"),
-		Version:  GetVersion(),
-		HelpWriter: os.Stdout,
 		ErrorWriter: os.Stderr,
+		HelpFunc: cli.BasicHelpFunc("sql-migrate"),
+		HelpWriter: os.Stdout,
+		Version:  GetVersion(),
 	}
 
 	exitCode, err := cli.Run()
